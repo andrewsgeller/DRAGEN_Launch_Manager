@@ -21,7 +21,7 @@ DRAGEN Launch Manager is a Python-based GUI application designed for launching D
 
 1. Clone the repository or download the source code:
    ```
-   [git clone https://example.com/dragen_launch_manager.git](https://github.com/andrewsgeller/DRAGEN_Launch_Manager.git)
+   git clone https://example.com/dragen_launch_manager.git
    cd dragen_launch_manager
    ```
 2. **Install Dependencies and Set Up the DRAGEN Launch Manager**
