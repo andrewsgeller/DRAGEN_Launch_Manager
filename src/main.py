@@ -3,7 +3,7 @@ from tkinter import ttk
 from tkinter import messagebox
 import logging
 import os
-from config_loader import load_config
+from src.config_loader import load_config
 from src.launcher import launch_pipeline, check_bs_cli, check_bs_user, get_project_id, get_biosamples_from_project, verify_dragen_version, select_biosamples_gui
 import subprocess
 
