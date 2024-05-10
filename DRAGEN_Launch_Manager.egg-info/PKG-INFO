@@ -1,5 +1,0 @@
-Metadata-Version: 2.1
-Name: DRAGEN_Launch_Manager
-Version: 1.0.0
-Requires-Python: >=3.6
-Requires-Dist: pyyaml
