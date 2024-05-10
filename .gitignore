@@ -1,0 +1,4 @@
+# Ignore all files initially
+*.log
+*.pyc
+__pycache__/

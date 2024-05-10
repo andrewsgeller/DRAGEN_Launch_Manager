@@ -1,0 +1,34 @@
+command: |
+  bs launch application -n "DRAGEN Germline" --app-version {version}
+  -o ht-ref:hg38_altmaskedv2-cnv-hla-graph-anchored.v8
+  -o output_format:BAM
+  -o cnv_checkbox:1
+  -o cnv_ref:1
+  -o cnv_segmentation_mode:slm
+  -o sv_checkbox:1
+  -o eh_checkbox:1
+  -o eh_dropdown:default_plus_smn
+  -o cyp2d6_checkbox:1
+  -o cyp2b6_checkbox:1
+  -o gba_checkbox:1
+  -o smn_checkbox:1
+  -o hla_checkbox:1
+  -o star_checkbox:1
+  -o dupmark_checkbox:1
+  -o vc_enable_bqd_checkbox:1
+  -o metrics_checkbox:1
+  -o nirvana:1
+  -o write-indel-realign-output:1
+  -o enable-ml:on
+  -o commandline-disclaimer:true
+  -o arbitrary: enable-variant-annotation:true variant-annotation-data:/data/scratch/nirvana/ref variant-annotation-assembly:GrCh38
+  -o automation_checkbox:1
+  -o automation-coverage-bed-tag1:GrCh38-Twist2.0-Exome
+  -o automation-coverage-bed1:31554691634
+  -o automation-coverage-bed-tag2:GrCh38-NOTinAllDifficultRegions
+  -o automation-coverage-bed2:31554651367
+  -o automation-coverage-bed-tag3:GrCh38-AllDifficultRegions
+  -o automation-coverage-bed3:31554651366
+  -o automation-sample-id:biosamples/{biosamples}
+  -l "{run_name}_DRAGEN-Germline_{version}"
+  -o project-id:{project_id}

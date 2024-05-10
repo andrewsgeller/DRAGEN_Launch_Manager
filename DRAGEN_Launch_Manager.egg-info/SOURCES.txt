@@ -1,0 +1,9 @@
+README.md
+setup.py
+DRAGEN_Launch_Manager.egg-info/PKG-INFO
+DRAGEN_Launch_Manager.egg-info/SOURCES.txt
+DRAGEN_Launch_Manager.egg-info/dependency_links.txt
+DRAGEN_Launch_Manager.egg-info/entry_points.txt
+DRAGEN_Launch_Manager.egg-info/not-zip-safe
+DRAGEN_Launch_Manager.egg-info/requires.txt
+DRAGEN_Launch_Manager.egg-info/top_level.txt

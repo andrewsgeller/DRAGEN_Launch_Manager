@@ -1,0 +1,20 @@
+command: |
+  bs launch application -n "DRAGEN Enrichment" --app-version {version}
+  -o ht-ref:hg38_altmaskedv2-cnv-hla-graph-anchored.v8
+  -o fixed-bed:Twist_ILMN_Exome_2.0_Plus_Panel
+  -o qc-coverage-region-padding-2:150
+  -o automation-coverage-bed-tag1:HG38_TwistExome2_NOTInAllDifficult
+  -o automation-coverage-bed1:31121862624
+  -o automation-coverage-bed-tag2:HG38_TwistExome2_AllDifficult
+  -o automation-coverage-bed2:31121862623
+  -o picard_checkbox:1
+  -o phased-variants:true
+  -o phased-variants-n:15
+  -o maf:refseq
+  -o dupmark_checkbox:1
+  -o nirvana:1
+  -o commandline-disclaimer:true
+  -o automation_checkbox:1
+  -l "DRAGENEnrichment_{version}_{run_name}"
+  -o project-id:374996746
+  -o automation-sample-id:biosamples/{biosamples}

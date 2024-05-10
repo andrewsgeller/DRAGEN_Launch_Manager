@@ -1,0 +1,2 @@
+[console_scripts]
+dragen-launcher = src.main:main
