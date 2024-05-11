@@ -49,7 +49,7 @@ This command opens the graphical interface where you can:
 
 ## Folder Structure
 
-DRAGEN_Launch_Manager
+/DRAGEN_Launch_Manager
 ├── config
 │   ├── launch_options
 │   │   ├── dragen_enrichment_command_options.yaml
