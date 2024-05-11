@@ -49,6 +49,7 @@ This command opens the graphical interface where you can:
 
 ## Folder Structure
 
+```arduino
 /DRAGEN_Launch_Manager
 ├── config
 │   ├── launch_options
@@ -72,6 +73,7 @@ This command opens the graphical interface where you can:
 │   └── main.py
 ├── README.md
 └── setup.py
+```
 
 ## Contributing
 Contributions to the DRAGEN Launch Manager are welcome! Please fork the repository and submit pull requests with your proposed changes. Ensure to follow the existing coding styles and add appropriate tests if applicable.
