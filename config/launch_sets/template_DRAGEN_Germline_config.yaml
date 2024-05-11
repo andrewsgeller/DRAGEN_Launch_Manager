@@ -1,5 +1,20 @@
+##The first several option lines are required and are populated by the Launch Manager.
+# After constructing the desired command, create a copy of this file and save it into the .params directory
+
+Pipeline:
+  DRAGEN_Germline
+
+
 command: |
   bs launch application -n "DRAGEN Germline" --app-version {version}
+  -o automation-sample-id:biosamples/{biosamples}
+  -l "{run_name}_DRAGEN-Germline_{version}"
+  -o project-id:{project_id}
+  -o commandline-disclaimer:true
+########################################################################################
+# Place any Custom Options Below 
+# Select or add any options specific to your workflow and Illumina pipeline requirements
+########################################################################################
   -o ht-ref:hg38_altmaskedv2-cnv-hla-graph-anchored.v8
   -o output_format:BAM
   -o cnv_checkbox:1
@@ -20,7 +35,6 @@ command: |
   -o nirvana:1
   -o write-indel-realign-output:1
   -o enable-ml:on
-  -o commandline-disclaimer:true
   -o arbitrary: enable-variant-annotation:true variant-annotation-data:/data/scratch/nirvana/ref variant-annotation-assembly:GrCh38
   -o automation_checkbox:1
   -o automation-coverage-bed-tag1:GrCh38-Twist2.0-Exome
@@ -29,6 +43,3 @@ command: |
   -o automation-coverage-bed2:31554651367
   -o automation-coverage-bed-tag3:GrCh38-AllDifficultRegions
   -o automation-coverage-bed3:31554651366
-  -o automation-sample-id:biosamples/{biosamples}
-  -l "{run_name}_DRAGEN-Germline_{version}"
-  -o project-id:{project_id}

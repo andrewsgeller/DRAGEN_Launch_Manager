@@ -1,0 +1,27 @@
+##The first several option lines are required and are populated by the Launch Manager.
+# After constructing the desired command, create a copy of this file and save it into the .params directory
+
+Pipeline:
+  DRAGEN_RNA
+
+command: |
+  bs launch application -n "DRAGEN RNA" --app-version {version}
+  -o app-session-name:"DRAGEN-RNA_{version}_{run_name}"
+  -o sample-id:biosamples/{biosamples}
+  -o project-id:{project_id}
+  -o basespace-labs-disclaimer:Accepted
+  -o commandline-disclaimer:true
+########################################################################################
+# Place any Custom Options Below 
+# Select or add any options specific to your workflow and Illumina pipeline requirements
+########################################################################################
+  -o ht-ref:custom
+  -o ht-id:34866044255
+  -o enable-quantification:true
+  -o gene-annotations:34849714824
+  -o enable-gene-fusion:true
+  -o enable-variant-calling:true
+  -o enable-annotation:true
+  -o annotation-genome:GRCh38
+  -o coverage_list.coverage_bed_id:34851417089
+  -o coverage_list.tag:gencode.v44

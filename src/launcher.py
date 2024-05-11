@@ -82,25 +82,28 @@ def launch_pipeline(command):
 def select_biosamples_gui(biosamples, run_name):
     selected_samples = []
 
-    window = tk.Toplevel()  # Changed to Toplevel to be used when called from another Tk instance.
+    window = tk.Toplevel()
     window.title(f"Select Biosamples {run_name} to Launch DRAGEN Pipeline")
     window.geometry("600x400")
     window.resizable(True, True)
 
-    # Define the function select_all before creating the Checkbutton that uses it.
+    # Apply consistent styling
+    style = ttk.Style(window)
+    style.configure('TLabel', font=('Arial', 12), background='white')
+    style.configure('TEntry', font=('Arial', 12), padding=5)
+    style.configure('TButton', font=('Arial', 12))
+    style.configure('TCheckbutton', font=('Arial', 12))
+    style.theme_use('clam')  # Apply a theme for a better visual appearance
+
     def select_all():
         is_select_all = select_all_var.get()
         for var in checkbox_vars:
             var.set(is_select_all)
 
-    style = ttk.Style(window)
-    style.configure('TCheckbutton', font=('Arial', 12))
-
     select_all_var = tk.BooleanVar(value=False)
     select_all_button = ttk.Checkbutton(window, text="Select All", variable=select_all_var, onvalue=True, offvalue=False, command=select_all, style='TCheckbutton')
     select_all_button.pack(anchor=tk.W, padx=10, pady=5)
 
-    # Scrollable frame setup
     scrollable_frame = ttk.Frame(window)
     canvas = tk.Canvas(scrollable_frame)
     scrollbar = ttk.Scrollbar(scrollable_frame, orient="vertical", command=canvas.yview)
@@ -117,12 +120,11 @@ def select_biosamples_gui(biosamples, run_name):
         checkbox.pack(anchor=tk.W, padx=10, pady=2)
         checkbox_vars.append(var)
 
-    # Confirmation button setup
     def confirm_selection():
-        selected_samples.clear()  # Clear previous selections if any
+        selected_samples.clear()
         for i, var in enumerate(checkbox_vars):
             if var.get():
-                selected_samples.append(biosamples[i][1])  # Append the ID
+                selected_samples.append(biosamples[i][1])
         window.destroy()
 
     confirm_button = ttk.Button(window, text="OK", command=confirm_selection, style='TButton')
@@ -131,6 +133,5 @@ def select_biosamples_gui(biosamples, run_name):
     frame.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
     scrollable_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=5)
 
-    window.wait_window()  # Waits until the window is closed before moving on
-
-    return ','.join(selected_samples)  # Return the selected samples IDs as a comma-separated string
+    window.wait_window()
+    return ','.join(selected_samples)

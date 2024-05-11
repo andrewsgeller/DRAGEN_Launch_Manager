@@ -2,3 +2,6 @@
 *.log
 *.pyc
 __pycache__/
+
+# Ignore all files in the params directory
+params/

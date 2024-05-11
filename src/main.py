@@ -35,8 +35,15 @@ def main():
     # GUI setup
     root = tk.Tk()
     root.title("DRAGEN Pipeline Launcher")
-    root.geometry("500x400")  # Adjusted for better layout visibility
+    root.geometry("600x450")  # Slightly larger for better layout
 
+    # Style configuration
+    style = ttk.Style()
+    style.configure('TLabel', font=('Arial', 14))
+    style.configure('TEntry', font=('Arial', 14), padding=5)
+    style.configure('TButton', font=('Arial', 14), padding=5)
+    style.configure('TCombobox', font=('Arial', 14))
+    style.theme_use('clam')
     # Variables
     run_name_var = tk.StringVar()
     pipeline_var = tk.StringVar()
@@ -121,20 +128,21 @@ def main():
             messagebox.showerror("Error", "Failed to build the command. Check logs for details.")
             return None
 
-    # GUI Components
-    ttk.Label(root, text="Run Name:").pack()
-    ttk.Entry(root, textvariable=run_name_var).pack()
+    # GUI Components with improved aesthetics
+    ttk.Label(root, text="Run Name:").pack(pady=5)
+    ttk.Entry(root, textvariable=run_name_var, width=30).pack(pady=5)
 
-    ttk.Label(root, text="Select Pipeline:").pack()
-    pipeline_combo = ttk.Combobox(root, textvariable=pipeline_var, values=["DRAGEN_Germline", "DRAGEN_Enrichment", "DRAGEN_RNA"], state="readonly")
-    pipeline_combo.pack()
+    ttk.Label(root, text="Select Pipeline:").pack(pady=5)
+    pipeline_combo = ttk.Combobox(root, textvariable=pipeline_var, values=["DRAGEN_Germline", "DRAGEN_Enrichment", "DRAGEN_RNA"], state="readonly", width=28)
+    pipeline_combo.pack(pady=5)
 
-    ttk.Label(root, text="Version:").pack()
-    ttk.Entry(root, textvariable=version_var).pack()
+    ttk.Label(root, text="Version:").pack(pady=5)
+    ttk.Entry(root, textvariable=version_var, width=30).pack(pady=5)
 
     submit_button = ttk.Button(root, text="Submit", command=on_submit)
-    submit_button.pack()
+    submit_button.pack(pady=10)
 
+    # Maintain main loop and other functions as you have implemented
     root.mainloop()
 
 if __name__ == "__main__":

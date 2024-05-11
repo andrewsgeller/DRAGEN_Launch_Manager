@@ -1,0 +1,29 @@
+##The first several option lines are required and are populated by the Launch Manager.
+# After constructing the desired command, create a copy of this file and save it into the .params directory
+
+Pipeline:
+  DRAGEN_Enrichment
+
+command: |
+  bs launch application -n "DRAGEN Enrichment" --app-version {version}
+  -l "DRAGENEnrichment_{version}_{run_name}"
+  -o project-id:{project_id}
+  -o automation-sample-id:biosamples/{biosamples}
+  -o commandline-disclaimer:true
+  -o automation_checkbox:1
+########################################################################################
+# Place any Custom Options Below 
+# Select or add any options specific to your workflow and Illumina pipeline requirements
+########################################################################################
+  -o ht-ref: choose reference genome
+  -o fixed-bed: choose bed file
+  -o qc-coverage-region-padding-2:150
+  -o automation-coverage-bed-tag1: choose tag
+  -o automation-coverage-bed1: choose bed file
+  -o automation-coverage-bed-tag2: choose tag
+  -o automation-coverage-bed2: choose bed file
+  -o picard_checkbox:1
+  -o phased-variants:true
+  -o phased-variants-n:15
+  -o maf:refseq
+

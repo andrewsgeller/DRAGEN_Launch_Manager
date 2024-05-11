@@ -1,0 +1,101 @@
+## DRAGEN Enrichment Command Options
+
+app-session-name: # Required. TextBox
+project-id: # Required. ProjectChooser
+vc-type: # RadioButton
+ht-ref: # Select
+ht-id: # FileChooser
+fasta-id: # Required. FileChooser
+fixed-bed: # Select
+target_bed_id: # Required. FileChooser
+qc-coverage-region-padding-2: # Numeric
+input_list: # Notes: Input list options
+  sample-id: # SampleChooser
+  bam-id: # FileChooser
+  cram-id: # FileChooser
+  sex: # Select
+coverage_list: # Notes: Coverage list options
+  coverage_bed_id: # FileChooser
+  mapq_filter: # Numeric
+  bq_filter: # Numeric
+  tag: # TextBox
+  fullres_checkbox: # CheckBox
+picard_checkbox: # CheckBox
+bait_bed_default_or_custom: # RadioButton
+bait_bed_file: # FileChooser
+liquid_tumor: # CheckBox
+af-filtering: # CheckBox
+vc-af-call-threshold: # Numeric
+vc-af-filter-threshold: # Numeric
+sq-filtering: # CheckBox
+vc-sq-call-threshold: # Numeric
+vc-sq-filter-threshold: # Numeric
+baseline-noise-bed: # FileChooser
+vc-hotspot: # Select
+vc-hotspot-vcf: # Required. FileChooser
+excluded-regions: # FileChooser
+tmb: # CheckBox
+tmb-bed: # FileChooser
+enable-germline-tagging: # CheckBox
+multiallelic-filter: # CheckBox
+qc_somatic_contam_checkbox: # CheckBox
+cnv_checkbox: # CheckBox
+cnv_ref: # CheckBox
+cnv_segmentation_mode: # Select
+cnv-segmentation-bed: # FileChooser
+cnv-filter-qual: # Numeric
+cnv-filter-copy-ratio: # Numeric
+fixed-cnv: # Required. Select
+cnv-baseline-id: # Required. FileChooser
+cnv-target-bed: # FileChooser
+cnv_gcbias_checkbox: # CheckBox
+hla_checkbox: # CheckBox
+sv_checkbox: # CheckBox
+dnaff: # CheckBox
+sv-force: # FileChooser
+sv-itd: # FileChooser
+sv-locus: # FileChooser
+umi_checkbox: # CheckBox
+umi_library_type: # Select
+umi_vc: # Select
+umi_min_supporting_reads: # Numeric
+umi_error_table: # FileChooser
+umi_nonrandom_whitelist: # FileChooser
+pipeline-mode: # RadioButton
+vcf_or_gvcf: # RadioButton
+vc-target-bed-padding: # Numeric
+dupmark_checkbox: # CheckBox
+nirvana: # CheckBox
+maf: # Select
+forcegt: # FileChooser
+vc-filter: # TextBox
+high-coverage: # CheckBox
+lowpass: # CheckBox
+phased-variants: # CheckBox
+phased-variants-n: # Numeric
+qc-ignore-overlap: # CheckBox
+bin-memory: # Numeric
+cram-reference: # Select
+custom-cram: # Required. FileChooser
+fragmentomics: # CheckBox
+fragmentomics-wps: # FileChooser
+fragmentomics-exclude: # FileChooser
+preset_snv: # CheckBox
+preset_cnv: # CheckBox
+preset_sv: # CheckBox
+batching: # CheckBox
+batch-size: # Numeric
+commandline-disclaimer: # CheckBox
+arbitrary: # TextBox
+additional-file: # FileChooser
+automation_checkbox: # CheckBox
+automation-sample-id: # SampleChooser
+automation-bam-id: # FileChooser
+automation-cram-id: # FileChooser
+automation-sex: # Select
+automation-coverage-bed-tag1: # TextBox
+automation-coverage-bed1: # FileChooser
+automation-coverage-bed-tag2: # TextBox
+automation-coverage-bed2: # FileChooser
+automation-coverage-bed-tag3: # TextBox
+automation-coverage-bed3: # FileChooser

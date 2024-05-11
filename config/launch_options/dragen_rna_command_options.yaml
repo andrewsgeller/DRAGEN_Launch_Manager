@@ -1,0 +1,39 @@
+#DRAGEN RNA Command Options ###
+
+app-session-name: # Required. TextBox
+project-id: # Required. ProjectChooser
+sample-id: # Required. SampleChooser
+ht-ref: # Select
+ht-id: # FileChooser
+rrna-contig: # TextBox
+enable-quantification: # CheckBox
+gene-annotations: # FileChooser
+enable-gene-fusion: # CheckBox
+enable-variant-calling: # CheckBox
+enable-annotation: # CheckBox
+annotation-genome: # Select
+genotype-file: # FileChooser
+output_format: # Select
+basespace-labs-disclaimer: # Required. CheckBox
+coverage_list: # Notes: Coverage list options
+  coverage_bed_id: # FileChooser
+  mapq_filter: # Numeric
+  bq_filter: # Numeric
+  tag: # TextBox
+  fullres_checkbox: # CheckBox
+downsample-method: # Select
+downsample-reads: # Numeric
+gf-restrict-genes: # CheckBox
+gf-enriched-file: # FileChooser
+gf-enriched-regions: # Select
+custom-bed: # FileChooser
+gf-repeat-file: # FileChooser
+gf-blast-file: # FileChooser
+sv-vcf-file: # FileChooser
+rna-library-type: # Select
+polya-trimming: # Select
+exclude-chrm-metrics: # CheckBox
+filter-short-reads: # CheckBox
+filter-short-reads-length: # Required. Numeric
+commandline-disclaimer: # CheckBox
+arbitrary-args: # TextBox
